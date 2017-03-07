@@ -1,38 +1,17 @@
 module Main exposing (..)
 
 import Html
-import Types exposing (..)
 import Ports exposing (..)
-import View exposing (view)
-import Subscriptions exposing (subscriptions)
-
-
--- MAIN
+import Main.View exposing (view)
+import Main.Update exposing (update)
+import Main.Subscriptions exposing (subscriptions)
+import Main.Init as Init
 
 
 main =
     Html.program
-        { init = ( Model "", Cmd.none )
+        { init = ( Init.model, Cmd.none )
         , view = view
         , update = update
         , subscriptions = subscriptions
         }
-
-
--- UPDATE
-
-
-update : Msg -> Model -> ( Model, Cmd Msg )
-update message model =
-    case message of
-        UpdateField str ->
-            Model str ! []
-
-        CheckIfEnter code ->
-            if code == 13 then
-                Model "Submitted!" ! []
-            else
-                model ! []
-
-        HandlePort str ->
-            Model str ! []

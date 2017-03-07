@@ -35,15 +35,31 @@ pointier        = #e0d6ca   // Primary color if you want it to light up a lil
 pointColor      = #b0a69a   // Primary color
 
 
-ignorable0 = #807672    // Things that can be ignored should be this color
-ignorable1 = #57524f    //      |
-ignorable2 = #2c2826    //      |   more ignorable
-ignorable3 = #131610    //      v
-
+ignorable0      = #807672   // Things that can be ignored should be this color
+ignorable1      = #57524f   //      |
+ignorable2      = #2c2826   //      |   more ignorable
+ignorable3      = #131610   //      v
 
 
 body
   background backgroundx2
   padding 0
   margin 0
+    
+
+.window-card
+  background ignorable2
+  border-top 2px solid ignorable1
+  border-left 2px solid ignorable1
+  border-right 2px solid ignorable3
+  border-bottom 2px solid ignorable3
   
+  &.init
+    width 500px
+    height 400px
+    top 50%
+    left 50%
+    margin-top -200px
+    margin-left -250px
+    position absolute
+    

@@ -35,7 +35,7 @@ gulp.task("js", function() {
 
 gulp.task("stylus", function() {
   return gulp
-    .src([ "./source/main.styl", paths.css ])
+    .src([ "./source/styles/main.styl", paths.css ])
     .pipe(concat("style.styl"))
     .pipe(stylus())
     .pipe(gulp.dest(paths.development));
@@ -43,8 +43,8 @@ gulp.task("stylus", function() {
 
 
 // Uncomment out for automatic formatting
-// gulp.task("elm", ["elm-format", "elm-make"]);
-gulp.task("elm", ["elm-make"]);
+gulp.task("elm", ["elm-format", "elm-make"]);
+// gulp.task("elm", ["elm-make"]);
 
 
 
