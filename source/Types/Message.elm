@@ -4,7 +4,7 @@ import Types.Model exposing (BackgroundColor(..))
 
 
 type Msg
-    = SetUp
+    = TrySetUp
     | CheckIfReady
     | SetProjectName String
     | SetProjectWidth String

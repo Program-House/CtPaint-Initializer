@@ -14,7 +14,7 @@ view ready =
             [ buttonClass ready
             , value "Okay"
             , type_ "submit"
-            , onClick SetUp
+            , onClick TrySetUp
             ]
             []
         ]
